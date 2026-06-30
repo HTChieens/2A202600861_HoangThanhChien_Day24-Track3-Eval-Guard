@@ -1,0 +1,158 @@
+{
+  "total_questions": 50,
+  "per_distribution": {
+    "factual": {
+      "count": 20,
+      "faithfulness": 0.8237290969899667,
+      "answer_relevancy": 0.7774505314946492,
+      "context_precision": 0.9833333333333334,
+      "context_recall": 0.8979498083186164,
+      "avg_score": 0.8706156925341414
+    },
+    "multi_hop": {
+      "count": 20,
+      "faithfulness": 0.5837353258592739,
+      "answer_relevancy": 0.49929668630452717,
+      "context_precision": 0.9333333333333333,
+      "context_recall": 0.650610953246185,
+      "avg_score": 0.6667440746858299
+    },
+    "adversarial": {
+      "count": 10,
+      "faithfulness": 0.6625,
+      "answer_relevancy": 0.6496031746031746,
+      "context_precision": 0.9,
+      "context_recall": 0.507527846799211,
+      "avg_score": 0.6799077553505964
+    }
+  },
+  "failure_clusters": {
+    "matrix": {
+      "faithfulness": {
+        "factual": 8,
+        "multi_hop": 9,
+        "adversarial": 3
+      },
+      "context_recall": {
+        "factual": 4,
+        "multi_hop": 5,
+        "adversarial": 6
+      },
+      "context_precision": {
+        "factual": 1,
+        "multi_hop": 0,
+        "adversarial": 1
+      },
+      "answer_relevancy": {
+        "factual": 7,
+        "multi_hop": 6,
+        "adversarial": 0
+      }
+    },
+    "dominant_failure_distribution": "factual",
+    "dominant_failure_metric": "faithfulness",
+    "insight": "Distribution 'factual' có nhiều failure nhất. Metric 'faithfulness' là điểm yếu chủ đạo. Gợi ý: Tighten system prompt, lower temperature"
+  },
+  "bottom_10": [
+    {
+      "rank": 1,
+      "question_id": 40,
+      "distribution": "multi_hop",
+      "question": "Nhân viên thử việc tháng thứ 3 phát hiện vi phạm bảo mật. Họ nên và không nên làm gì theo chính sách?",
+      "avg_score": 0.2083,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    },
+    {
+      "rank": 2,
+      "question_id": 47,
+      "distribution": "adversarial",
+      "question": "Khi phát hiện malware trên máy tính công ty, nhân viên có nên tự xử lý không?",
+      "avg_score": 0.25,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    },
+    {
+      "rank": 3,
+      "question_id": 22,
+      "distribution": "multi_hop",
+      "question": "Nếu cần mua một chiếc laptop 30 triệu cho nhân viên mới, ai phê duyệt và cần gì từ phòng CNTT?",
+      "avg_score": 0.3125,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    },
+    {
+      "rank": 4,
+      "question_id": 21,
+      "distribution": "multi_hop",
+      "question": "Một nhân viên Senior có 9 năm thâm niên được nghỉ bao nhiêu ngày phép năm và lương trong khoảng nào?",
+      "avg_score": 0.3375,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    },
+    {
+      "rank": 5,
+      "question_id": 50,
+      "distribution": "adversarial",
+      "question": "Nhân viên Manager có thể dùng VPN cá nhân (như NordVPN) khi WFH để tăng bảo mật thêm không?",
+      "avg_score": 0.3707,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    },
+    {
+      "rank": 6,
+      "question_id": 39,
+      "distribution": "multi_hop",
+      "question": "So sánh yêu cầu mật khẩu giữa policy v1.0 và v2.0 về độ dài tối thiểu, thời hạn đổi và MFA.",
+      "avg_score": 0.3871,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    },
+    {
+      "rank": 7,
+      "question_id": 25,
+      "distribution": "multi_hop",
+      "question": "Lương thử việc của nhân viên Junior mức cao nhất là bao nhiêu?",
+      "avg_score": 0.3958,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    },
+    {
+      "rank": 8,
+      "question_id": 7,
+      "distribution": "factual",
+      "question": "Nghỉ phép không lương 20 ngày cần ai phê duyệt?",
+      "avg_score": 0.3977,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    },
+    {
+      "rank": 9,
+      "question_id": 33,
+      "distribution": "multi_hop",
+      "question": "Nhân viên Manager có thâm niên 12 năm: tổng phụ cấp hàng tháng và số ngày phép năm theo v2024 là bao nhiêu?",
+      "avg_score": 0.3977,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    },
+    {
+      "rank": 10,
+      "question_id": 44,
+      "distribution": "adversarial",
+      "question": "Bao lâu phải đổi mật khẩu một lần?",
+      "avg_score": 0.4028,
+      "worst_metric": "faithfulness",
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten system prompt, lower temperature"
+    }
+  ]
+}

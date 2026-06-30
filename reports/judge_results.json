@@ -1,0 +1,59 @@
+{
+  "sample_judge_result": {
+    "question": "Nhân viên được nghỉ bao nhiêu ngày phép năm?",
+    "answer_a": "Nhân viên được nghỉ 15 ngày phép năm theo chính sách v2024 hiện hành.",
+    "answer_b": "Theo quy định, nhân viên có 12 ngày phép hàng năm.",
+    "winner_pass1": "A",
+    "winner_pass2": "A",
+    "final_winner": "A",
+    "reasoning_pass1": "Câu trả lời A cung cấp thông tin chính xác hơn về số ngày phép theo chính sách cụ thể cho năm 2024, trong khi câu trả lời B không rõ ràng về nguồn và có con số thấp hơn.",
+    "reasoning_pass2": "Answer B cung cấp thông tin chính xác hơn về số ngày phép hiện tại theo chính sách mới nhất, trong khi Answer A cung cấp thông tin cũ hơn.",
+    "position_consistent": true,
+    "scores_pass1": {
+      "A": 1.0,
+      "B": 0.5
+    },
+    "scores_pass2": {
+      "A": 1.0,
+      "B": 0.6
+    }
+  },
+  "human_labels": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0
+  ],
+  "judge_labels": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0
+  ],
+  "cohen_kappa": 1.0,
+  "bias_report": {
+    "total_judged": 1,
+    "position_bias_rate": 0.0,
+    "position_bias_count": 0,
+    "verbosity_bias": 1.0,
+    "verbosity_details": {
+      "a_wins_a_longer": 1,
+      "b_wins_b_longer": 0,
+      "total_decisive": 1
+    },
+    "interpretation": "Position bias thấp — judge ổn định."
+  },
+  "note": "Offline-safe Phase B report generated with deterministic calibration labels."
+}
